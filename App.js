@@ -1,12 +1,21 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
+import Card from "./components/Card";
+import HomePage from "./screens/StudentHomePage";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>CWx</Text>
-      <StatusBar style="auto" />
+      <HomePage />
     </View>
   );
 }
@@ -14,8 +23,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#FFF259",
   },
 });
