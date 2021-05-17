@@ -9,7 +9,7 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-
+import Card from "./components/Card";
 import HomePage from "./screens/StudentHomePage";
 
 export default function App() {
