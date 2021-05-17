@@ -9,17 +9,20 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import backgroundImage from "./assets/Images/loginPage.png";
+
+import HomePage from "./screens/StudentHomePage";
 
 export default function App() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <HomePage />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#FFF259",
   },
 });
