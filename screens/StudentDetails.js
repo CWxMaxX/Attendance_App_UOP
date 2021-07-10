@@ -17,7 +17,7 @@ const StudentDetailPage = (props) => {
         <View
           style={{
             flexDirection: "column",
-            height: "75%",
+            height: "60%",
             justifyContent: "flex-end",
           }}
         >
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   imageFrame: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
     // backgroundColor: "#eee",
     alignSelf: "center",
   },

@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Card from "./components/Card";
+import LoginPage from "./screens/LoginPage";
 import StudentDetailPage from "./screens/StudentDetails";
 import HomePage from "./screens/StudentHomePage";
 import ViewAttPage from "./screens/ViewAttPage";
@@ -17,7 +18,7 @@ import ViewAttPage from "./screens/ViewAttPage";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ViewAttPage />
+      <HomePage />
     </View>
   );
 }
