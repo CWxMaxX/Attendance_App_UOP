@@ -32,7 +32,10 @@ const HomePage = (props) => {
         </View>
       </View>
       <Pressable>
-        <Card title={"View Attendance"} discription={"Check your Attendance"} />
+        <Card
+          title={"View Attendance"}
+          discription={"Check your Attendance for each courses"}
+        />
       </Pressable>
       <Pressable>
         <Card
