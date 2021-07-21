@@ -8,8 +8,9 @@ const Header = (props) => {
       <TouchableOpacity style={{ position: "absolute", left: 10, bottom: 5 }}>
         <Entypo name="menu" size={30} color="black" />
       </TouchableOpacity>
-      <TouchableOpacity style={{ position: "absolute", right: 10, bottom: 5 }}>
-        <Entypo name="home" size={30} color="black" />
+      <TouchableOpacity style={{ position: "absolute", right: 10, bottom: 8 }}>
+        {/* <Entypo name="bell" size={30} color="black" /> */}
+        <Entypo name="bell" size={26} color="black" />
       </TouchableOpacity>
 
       <Text style={styles.headerTitle}>{props.title}</Text>

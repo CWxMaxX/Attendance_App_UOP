@@ -8,19 +8,17 @@ import {
   Text,
 } from "react-native";
 import Card from "../components/Card";
-import Header from "../components/Header";
 import Person from "../assets/Images/Person.png";
 
 const HomePage = (props) => {
   return (
     <View style={styles.container}>
-      <Header title="Home" />
       {/* Photo with full name */}
       <View style={styles.upperFrame}>
         <View style={styles.imageFrame}>
           <ImageBackground
             source={Person}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: 180, height: 180 }}
           />
         </View>
 
@@ -31,13 +29,21 @@ const HomePage = (props) => {
           <Text style={{ fontSize: 20 }}>S/16/330</Text>
         </View>
       </View>
-      <Pressable>
+      <Pressable
+        onPress={() => {
+          props.navigation.navigate({ routeName: "Attendance" });
+        }}
+      >
         <Card
           title={"View Attendance"}
           discription={"Check your Attendance for each courses"}
         />
       </Pressable>
-      <Pressable>
+      <Pressable
+        onPress={() => {
+          props.navigation.navigate({ routeName: "Notifications" });
+        }}
+      >
         <Card
           title={"View Notifications"}
           discription={
@@ -45,7 +51,11 @@ const HomePage = (props) => {
           }
         />
       </Pressable>
-      <Pressable>
+      <Pressable
+        onPress={() => {
+          props.navigation.navigate({ routeName: "StudentDetails" });
+        }}
+      >
         <Card
           title={"View Account Details"}
           discription={
@@ -57,6 +67,13 @@ const HomePage = (props) => {
   );
 };
 
+HomePage.navigationOptions = {
+  headerTitle: "Home",
+  headerStyle: {
+    backgroundColor: "#DA8E09",
+  },
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -66,15 +83,17 @@ const styles = StyleSheet.create({
   upperFrame: {
     width: "90%",
     height: "40%",
-    marginTop: 20,
+    marginTop: 10,
     // backgroundColor: "#fff",
     alignSelf: "center",
   },
   imageFrame: {
     width: "70%",
-    height: "80%",
+    height: "70%",
     // backgroundColor: "#eee",
     alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 export default HomePage;

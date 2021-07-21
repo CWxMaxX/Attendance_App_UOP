@@ -1,26 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
-import Header from "../components/Header";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Image,
+  ScrollView,
+} from "react-native";
 import Person from "../assets/Images/Person.png";
 
 const StudentDetailPage = (props) => {
   return (
-    <View style={styles.container}>
-      <Header title={"Student Details"} />
-      <View style={styles.upperFrame}>
-        <View style={styles.imageFrame}>
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.upperContainer}>
           <ImageBackground
             source={Person}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: 180, height: 180 }}
           />
         </View>
-        <View
-          style={{
-            flexDirection: "column",
-            height: "60%",
-            justifyContent: "flex-end",
-          }}
-        >
+        <View style={styles.downContainer}>
           <View style={{ minHeight: 60 }}>
             <Text style={styles.upperText}>Name</Text>
             <View style={styles.line}></View>
@@ -53,26 +52,31 @@ const StudentDetailPage = (props) => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
+};
+StudentDetailPage.navigationOptions = {
+  headerTitle: "Account Details",
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: "center",
   },
+  upperContainer: {
+    alignItems: "center",
+    marginTop: 10,
 
-  upperFrame: {
+    height: 200,
     width: "90%",
-    height: "86%",
-    // backgroundColor: "#fff",
-    alignSelf: "center",
+    marginBottom: 5,
   },
-  imageFrame: {
-    width: 300,
-    height: 300,
-    // backgroundColor: "#eee",
-    alignSelf: "center",
+  downContainer: {
+    marginTop: 0,
+
+    height: "100%",
+    width: "90%",
   },
   line: {
     width: "90%",
