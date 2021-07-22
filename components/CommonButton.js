@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
 
 const CommonButton = (props) => {
   return (
     <View>
-      <TouchableOpacity style={{ ...styles.button, ...props.style }}>
+      <TouchableOpacity
+        style={{ ...styles.button, ...props.style }}
+        onPress={props.onPress}
+      >
         <Text>{props.title}</Text>
       </TouchableOpacity>
     </View>
