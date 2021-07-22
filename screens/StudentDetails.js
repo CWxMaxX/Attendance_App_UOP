@@ -57,12 +57,16 @@ const StudentDetailPage = (props) => {
 };
 StudentDetailPage.navigationOptions = {
   headerTitle: "Account Details",
+  headerStyle: {
+    backgroundColor: "#DA8E09",
+  },
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    backgroundColor: "#FFF259",
   },
   upperContainer: {
     alignItems: "center",
