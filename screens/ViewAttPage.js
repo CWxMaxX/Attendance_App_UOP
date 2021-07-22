@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 import Card from "../components/Card";
+import CommonButton from "../components/CommonButton";
 import CommonCard from "../components/CommonCard";
 
 const ViewAttPage = (props) => {
@@ -8,9 +9,23 @@ const ViewAttPage = (props) => {
     <View style={styles.container}>
       <CommonCard
         content={
-          <View>
+          <View style={{ width: "100%" }}>
             <Text>Registration Number</Text>
+
+            <TextInput
+              style={styles.textInputBox}
+              placeholder={"S16330"}
+            ></TextInput>
+
             <Text>Course Code</Text>
+            <TextInput
+              style={styles.textInputBox}
+              placeholder={"CS304"}
+            ></TextInput>
+            <CommonButton
+              style={styles.buttonAli}
+              title={"View"}
+            ></CommonButton>
           </View>
         }
       ></CommonCard>
@@ -30,6 +45,20 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FFF259",
     alignItems: "center",
+  },
+  textInputBox: {
+    marginBottom: 20,
+    marginTop: 5,
+    backgroundColor: "#fff",
+    width: "80%",
+    height: 40,
+    elevation: 5,
+    borderRadius: 10,
+    alignSelf: "center",
+    padding: 10,
+  },
+  buttonAli: {
+    alignSelf: "center",
   },
 });
 
