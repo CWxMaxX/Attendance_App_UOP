@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, Alert } from "react-native";
 import Card from "../components/Card";
 import CommonButton from "../components/CommonButton";
 import CommonCard from "../components/CommonCard";
@@ -9,7 +9,7 @@ const ViewAttPage = (props) => {
     <View style={styles.container}>
       <CommonCard
         content={
-          <View style={{ width: "100%" }}>
+          <View style={{ width: "100%", paddingVertical: 30 }}>
             <Text>Registration Number</Text>
 
             <TextInput
@@ -25,6 +25,9 @@ const ViewAttPage = (props) => {
             <CommonButton
               style={styles.buttonAli}
               title={"View"}
+              onPress={() => {
+                Alert.alert("Still Developing Back-end");
+              }}
             ></CommonButton>
           </View>
         }
@@ -43,6 +46,7 @@ ViewAttPage.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingVertical: 30,
     backgroundColor: "#FFF259",
     alignItems: "center",
   },
@@ -58,6 +62,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   buttonAli: {
+    marginTop: 20,
     alignSelf: "center",
   },
 });
