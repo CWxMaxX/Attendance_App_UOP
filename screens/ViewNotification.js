@@ -15,9 +15,6 @@ const SettingsPage = (props) => {
 
 SettingsPage.navigationOptions = {
   headerTitle: "Notifications",
-  headerStyle: {
-    backgroundColor: "#DA8E09",
-  },
 };
 
 const styles = StyleSheet.create({

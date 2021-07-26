@@ -57,9 +57,6 @@ const StudentDetailPage = (props) => {
 };
 StudentDetailPage.navigationOptions = {
   headerTitle: "Account Details",
-  headerStyle: {
-    backgroundColor: "#DA8E09",
-  },
 };
 
 const styles = StyleSheet.create({

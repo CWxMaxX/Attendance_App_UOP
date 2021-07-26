@@ -38,9 +38,6 @@ const ViewAttPage = (props) => {
 
 ViewAttPage.navigationOptions = {
   headerTitle: "Attendance",
-  headerStyle: {
-    backgroundColor: "#DA8E09",
-  },
 };
 
 const styles = StyleSheet.create({
