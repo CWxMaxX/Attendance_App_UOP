@@ -6,11 +6,14 @@ import {
   StyleSheet,
   View,
   Text,
+  Alert,
 } from "react-native";
 import Card from "../components/Card";
 import Person from "../assets/Images/Person.png";
 
 const HomePage = (props) => {
+  console.log(props);
+
   return (
     <View style={styles.container}>
       {/* Photo with full name */}
@@ -67,11 +70,21 @@ const HomePage = (props) => {
   );
 };
 
-HomePage.navigationOptions = {
-  headerTitle: "Home",
-  headerStyle: {
-    backgroundColor: "#DA8E09",
-  },
+HomePage.navigationOptions = ({ navigation }) => {
+  return {
+    headerRight: () => (
+      <View>
+        <Pressable
+          style={{ paddingRight: 10 }}
+          onPress={() => {
+            navigation.navigate({ routeName: "MarkAttp" });
+          }}
+        >
+          <Text style={{ fontWeight: "bold" }}>Mark Attendance</Text>
+        </Pressable>
+      </View>
+    ),
+  };
 };
 
 const styles = StyleSheet.create({

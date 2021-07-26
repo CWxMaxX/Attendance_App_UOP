@@ -16,7 +16,7 @@ const CommonButton = (props) => {
 
 const styles = StyleSheet.create({
   button: {
-    width: 100,
+    minWidth: 100,
     height: 50,
     backgroundColor: "#DA8E09",
     padding: 10,
