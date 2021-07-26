@@ -12,8 +12,6 @@ import Card from "../components/Card";
 import Person from "../assets/Images/Person.png";
 
 const HomePage = (props) => {
-  console.log(props);
-
   return (
     <View style={styles.container}>
       {/* Photo with full name */}

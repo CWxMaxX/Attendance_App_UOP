@@ -5,9 +5,16 @@ import StudentDetailPage from "../screens/StudentDetails";
 import ViewAttPage from "../screens/ViewAttPage";
 import ViewNotificationPage from "../screens/ViewNotification";
 import MarkAtt from "../screens/MarkAtt";
+import LoginPage from "../screens/LoginPage";
 
 const AppNavigation = createStackNavigator(
   {
+    Loginp: {
+      screen: LoginPage,
+      navigationOptions: {
+        headerTitle: "Login",
+      },
+    },
     Homep: {
       screen: HomePage,
       navigationOptions: {
