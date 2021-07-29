@@ -11,7 +11,7 @@ import Person from "../assets/Images/Person.png";
 
 const StudentDetailPage = (props) => {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "#FFF259" }}>
       <View style={styles.container}>
         <View style={styles.upperContainer}>
           <ImageBackground
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    height: "100%",
   },
   upperContainer: {
     alignItems: "center",

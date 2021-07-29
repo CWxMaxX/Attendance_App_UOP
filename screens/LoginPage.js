@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   StyleSheet,
@@ -7,10 +7,13 @@ import {
   View,
   ImageBackground,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 import backgroundImage from "../assets/Images/loginPage.png";
 
 const LoginPage = (props) => {
+  const [name, setName] = useState("CWx");
+  const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -26,14 +29,38 @@ const LoginPage = (props) => {
           >
             Sign In
           </Text>
-          <TextInput style={styles.inputStyle} placeholder="Username" />
-          <TextInput style={styles.inputStyle} placeholder="Password" />
+          <TextInput
+            style={styles.inputStyle}
+            placeholder="Username"
+            textContentType="username"
+            onChangeText={(text) => {
+              setName(text);
+            }}
+          />
+          <TextInput
+            style={styles.inputStyle}
+            placeholder="Password"
+            textContentType="password"
+            secureTextEntry={true}
+            onChangeText={(text) => {
+              setPassword(text);
+            }}
+          />
           <Text style={{ fontSize: 12, color: "#fff", marginTop: 10 }}>
             Forgot Password
           </Text>
           <TouchableOpacity
             style={styles.button}
-            onPress={console.log("sign In")}
+            onPress={() => {
+              if (name == "S16330" && password == "123456") {
+                props.navigation.replace({ routeName: "Homep" });
+              } else {
+                Alert.alert("Worng Credintionals");
+                console.log("Worng Credintionals");
+              }
+              // props.navigation.replace({ routeName: "Homep" });
+              // console.log();
+            }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>Sign In</Text>
           </TouchableOpacity>
